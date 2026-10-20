@@ -3,6 +3,8 @@
 Personal academic website built with HTML, CSS, and JavaScript. No build step
 or package installation is required.
 
+Live site: [xiangju-mi.github.io](https://xiangju-mi.github.io/).
+
 ## Structure
 
 ```text
@@ -28,14 +30,8 @@ Open [localhost:8000](http://127.0.0.1:8000/).
 
 ## GitHub Pages
 
-1. Create a repository named `<username>.github.io`, using your GitHub username.
-2. Push this directory's contents to the repository's `main` branch, with
-   `index.html` at the repository root.
-3. In **Settings → Pages**, choose **Deploy from a branch**, then **main**
-   and **/(root)**.
-
-The site will be available at `https://<username>.github.io/`.
-See the [GitHub Pages publishing documentation](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
+GitHub Pages publishes the repository root from `main`. Commit changes and
+run `git push origin main` to update the site.
 
 ## Maintenance
 
