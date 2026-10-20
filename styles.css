@@ -238,6 +238,7 @@ sub { font-size: 0.7em; line-height: 0; }
 .date { color: var(--muted); font-size: 13px; font-variant-numeric: tabular-nums; white-space: nowrap; }
 .what { min-width: 0; line-height: 1.6; text-wrap: pretty; }
 .news-highlight { color: var(--highlight); }
+.awards-list { margin: 18px 0 0; padding: 0; list-style: none; }
 
 .paper-list { margin: 0; padding: 0; list-style: none; }
 .paper-list > li { margin: 0; padding: 0; }

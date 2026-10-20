@@ -6,7 +6,7 @@ or package installation is required.
 ## Structure
 
 ```text
-index.html        Biography, research, publications, and experience
+index.html        Biography, research, publications, experience, and awards
 styles.css        Typography, layout, themes, and responsive styles
 script.js         Theme switching and publication video previews
 assets/
