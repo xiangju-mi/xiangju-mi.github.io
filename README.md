@@ -40,6 +40,18 @@ run `git push origin main` to update the site.
 - Keep local asset URLs relative so the site also works under a project path.
 - Preserve image dimensions when replacing publication figures.
 
+## Publishing privacy
+
+- `.gitignore` is an explicit allowlist of this website's source and assets.
+  New files stay ignored until deliberately added to that list.
+- Never force-add chat/session exports, private documents, credentials, local
+  paths, screenshots, or working/cache directories. Do not upload these through
+  releases, issues, attachments, or other GitHub features either.
+- Review staged filenames and content before every commit. Keep API tokens and
+  other private credentials out of all public website files.
+- Use a GitHub-provided `noreply` address for commit author and committer metadata.
+  A fresh clone must configure its Git identity separately.
+
 ## Visitor map
 
 The Visitors section uses [MapMyVisitors](https://mapmyvisitors.com/), the same

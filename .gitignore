@@ -1,11 +1,34 @@
-.DS_Store
-._*
-Thumbs.db
-.idea/
-.vscode/
-*.log
-*.swp
-*~
-.env
-.env.*
-tmp/
+# Strict allowlist: only the website files below belong in this public repository.
+# Chats, exports, credentials, private documents, previews, and caches stay local.
+# Add an explicit exception only when intentionally publishing a new website asset.
+*
+
+!/assets/
+!/assets/fonts/
+!/assets/images/
+!/assets/videos/
+!/.editorconfig
+!/.gitattributes
+!/.gitignore
+!/.nojekyll
+!/README.md
+!/assets/fonts/OFL-Lato.txt
+!/assets/fonts/lato-400-italic-latin.woff2
+!/assets/fonts/lato-400-latin.woff2
+!/assets/fonts/lato-700-latin.woff2
+!/assets/images/hmi.png
+!/assets/images/last-hd-teaser.png
+!/assets/images/last0-teaser.png
+!/assets/images/pku-logo-red.png
+!/assets/images/pku-logo-reverse.png
+!/assets/images/portrait.jpg
+!/assets/images/robobench-teaser.png
+!/assets/images/robomind2-teaser.png
+!/assets/images/simplexity.png
+!/assets/videos/last-hd.mp4
+!/assets/videos/last0.mp4
+!/assets/videos/robomind2.mp4
+!/index.html
+!/script.js
+!/styles.css
+!/visitors.js
