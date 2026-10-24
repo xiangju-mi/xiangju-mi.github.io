@@ -32,3 +32,6 @@
 !/script.js
 !/styles.css
 !/visitors.js
+!/assets/vendor/
+!/assets/vendor/jquery-1.12.4.min.js
+!/assets/vendor/jquery-LICENSE.txt

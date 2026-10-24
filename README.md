@@ -69,10 +69,13 @@ To replace or reconfigure it:
 
 The public section stays hidden until configured. Localhost previews show only
 an empty map and an explicit preview label; they never load the tracking script.
-Tracking loads asynchronously once per production page load, without requiring
-a scroll to the footer. Theme changes and viewport resizes do not reload it.
-The map uses the site's fonts and light/dark palette. Network failures display
-an unavailable message instead of a false zero. No API keys are needed in this
+Tracking starts once after the production page finishes loading, without
+requiring a scroll to the footer. The provider cannot hold the main page load
+event open or leave its tab loading indicator waiting for analytics. Theme changes and viewport resizes do not reload it.
+The map uses the site's fonts and light/dark palette. A 45-second timeout allows for slower networks; failed requests show a brief
+message, while the direct statistics link remains available. The widget can
+recover if data arrives later, without automatically retrying and double-counting.
+The provider-required jQuery 1.12.4 is served locally, avoiding a second CDN. No API keys are needed in this
 public repository; the embed ID is public.
 
 The widget uses `t=tt` for **Total Pageviews** since activation; detailed time
@@ -91,3 +94,7 @@ that policy.
 Lato is distributed under the [SIL Open Font License](assets/fonts/OFL-Lato.txt).
 Publication figures, videos, and institutional logos belong to their respective
 owners. This repository does not grant additional rights to those assets.
+
+The bundled jQuery 1.12.4 is from code.jquery.com and retains its original
+license header ([MIT license](https://jquery.org/license/)). It is loaded only
+for the production visitor widget.
