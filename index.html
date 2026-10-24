@@ -34,6 +34,7 @@
     <link rel="preload" href="./assets/fonts/lato-400-latin.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="./styles.css" />
     <script src="./script.js" defer></script>
+    <script src="./visitors.js" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#research">Skip to content</a>
@@ -648,9 +649,27 @@
         </ul>
       </section>
 
+      <!-- Set data-map-id to the d value from this site's MapMyVisitors embed code. -->
+      <section
+        class="section visitor-section"
+        id="visitors"
+        aria-labelledby="visitors-heading"
+        data-map-id="ZAVoGi57ORZrUicidsZf4r1wveNPtjeZxLu6Vn0a3lM"
+        hidden
+      >
+        <h2 id="visitors-heading">Visitors</h2>
+        <div class="visitor-map-mount"></div>
+        <p class="visitor-status" role="status">Loading visitor statistics…</p>
+        <p class="visitor-caption">
+          Since activation · Approximate locations ·
+          <a class="visitor-details" rel="external noopener noreferrer" target="_blank" hidden>View statistics ↗</a>
+          <a href="https://mapmyvisitors.com/b/policy" rel="external noopener noreferrer" target="_blank">MapMyVisitors</a>
+        </p>
+      </section>
+
       <footer class="site-footer">
         <span>Xiangju Mi <span lang="zh-CN">米相举</span></span>
-        <span>Updated September 2026</span>
+        <span>Updated October 2026</span>
       </footer>
     </main>
   </body>

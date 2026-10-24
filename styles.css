@@ -300,6 +300,71 @@ sub { font-size: 0.7em; line-height: 0; }
 .affiliation-content p { margin: 4px 0 0; font-size: 14px; line-height: 1.55; }
 .affiliation-content p span { color: var(--muted); }
 .affiliation-content .affiliation-detail, .affiliation-content .affiliation-advisor { margin-top: 2px; color: var(--muted); font-size: 13.5px; }
+
+.visitor-section {
+  --visitor-map-image: url("https://mapmyvisitors.com/generated_content/backs/bg-w_600-co_fdfdfc-cl_dce4ea.png");
+}
+:root[data-theme="dark"] .visitor-section {
+  --visitor-map-image: url("https://mapmyvisitors.com/generated_content/backs/bg-w_600-co_191c20-cl_36434f.png");
+}
+.visitor-section[hidden], .visitor-section [hidden] { display: none !important; }
+.visitor-map-mount { position: relative; width: min(100%, 600px); margin: 20px auto 0; }
+.visitor-section[data-state="preview"] .visitor-map-mount::before,
+.visitor-section[data-state="loading"] .visitor-map-mount::before {
+  content: "";
+  display: block;
+  width: 100%;
+  aspect-ratio: 2.04;
+  background-image: linear-gradient(var(--background), var(--background)), var(--visitor-map-image);
+  background-position: left bottom, center;
+  background-size: 6% 23%, 100% 100%;
+  background-repeat: no-repeat;
+}
+.visitor-section #mapmyvisitors-widget {
+  display: block !important;
+  position: absolute;
+  inset: 0 auto auto 0;
+  visibility: hidden;
+  width: 100% !important;
+  min-width: 0;
+  min-height: 0;
+  margin: 0 auto;
+  color: var(--muted);
+  text-decoration: none;
+}
+.visitor-section[data-state="ready"] #mapmyvisitors-widget { position: relative; visibility: visible; }
+.visitor-section[data-state="error"] .visitor-map-mount { height: 0; margin-top: 0; }
+.visitor-section #mapmyvisitors-widget .mapmyvisitors-map-container {
+  background-color: var(--background) !important;
+}
+.visitor-section #mapmyvisitors-widget .mapmyvisitors-map {
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 2.04;
+  /* Cover the non-interactive zoom icons baked into the provider's base image. */
+  background-image: linear-gradient(var(--background), var(--background)), var(--visitor-map-image) !important;
+  background-position: left bottom, center;
+  background-size: 6% 23%, 100% 100%;
+  background-repeat: no-repeat;
+}
+.visitor-section .mapmyvisitors-map svg { display: block; width: 100%; height: 100%; }
+.visitor-section .mapmyvisitors-map circle { fill: var(--accent) !important; }
+.visitor-section .mapmyvisitors-map circle[fill="#F8A400"] { fill: var(--link) !important; }
+.visitor-section #mapmyvisitors-widget .mapmyvisitors-visitors,
+.visitor-section #mapmyvisitors-widget .mapmyvisitors-date,
+.visitor-section #mapmyvisitors-widget .mapmyvisitors-bottom-text {
+  color: var(--muted) !important;
+  font-family: var(--sans) !important;
+  font-variant-numeric: tabular-nums;
+  text-shadow: none;
+}
+.visitor-section #mapmyvisitors-widget .mapmyvisitors-visitors { font-size: 14px !important; line-height: 1.6 !important; }
+.visitor-section #mapmyvisitors-widget .mapmyvisitors-date { margin-top: 2px; font-size: 12px !important; line-height: 1.6 !important; }
+.visitor-status { margin: 14px 0 0; color: var(--muted); font-size: 13px; text-align: center; }
+.visitor-caption { margin: 12px 0 0; color: var(--faint); font-size: 12px; text-align: center; text-wrap: pretty; }
+.visitor-caption a { white-space: nowrap; }
+.visitor-details::after { content: " · "; color: var(--faint); }
+
 .site-footer { display: flex; justify-content: space-between; gap: 12px; margin-top: 44px; padding-top: 18px; border-top: 1px solid var(--line); color: var(--faint); font-size: 12px; }
 .site-footer [lang="zh-CN"] { margin-left: 5px; font-size: 0.9em; }
 
@@ -375,6 +440,7 @@ sub { font-size: 0.7em; line-height: 0; }
   }
   .page { max-width: none; padding: 0; }
   .theme-toggle, .contact-line, .skip-link, .demo-cue { display: none; }
+  .visitor-section { display: none !important; }
   .paper, .affiliation { break-inside: avoid; }
   .paper-list > .paper-featured { margin-inline: 0; padding: 0; border-radius: 0; background: none; }
   .section { break-after: avoid; }
